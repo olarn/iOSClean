@@ -4,7 +4,10 @@
 
 ## User settings
 xcuserdata/
+
+## Recreate from pod install
 iOSClean.xcodeproj/xcuserdata/
+iOSClean.xcworkspace/
 
 ## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
 *.xcscmblueprint
@@ -57,6 +60,7 @@ playground.xcworkspace
 #
 
 Pods/
+Podfile.lock
 
 #
 # Add this line if you want to avoid checking in source code from the Xcode workspace
