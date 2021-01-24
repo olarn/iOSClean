@@ -14,24 +14,17 @@ class TodoItemTableViewCell: UITableViewCell {
     @IBOutlet weak var isDoneSwitch: UISwitch!
     
     private var item: Todo?
+    private var index = -1;
     
-    var todoItem: Todo? {
-        set {
-            item = newValue
-            titleLabel.text = item?.title
-            dueDateLabel.text = item?.dueDate.toString()
-            isDoneSwitch.isOn = item?.isDone ?? false
-        }
-        get {
-            return item
-        }
+    func set(_ item: Todo, withIndex index: Int) {
+        self.item = item
+        titleLabel.text = item.title
+        dueDateLabel.text = item.dueDate.toString()
+        isDoneSwitch.isOn = item.isDone
+        self.index = index
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    @IBAction func onTodoItemStatusChanged(_ sender: Any) {
+        Todolist.todoItems[index].isDone = isDoneSwitch.isOn
     }
 }

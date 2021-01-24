@@ -70,7 +70,7 @@ extension TodolistViewController: UITableViewDataSource, UITableViewDelegate {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "todoItemCell") as? TodoItemTableViewCell else {
             return UITableViewCell()
         }
-        cell.todoItem = todoItems[indexPath.row]
+        cell.set(todoItems[indexPath.row], withIndex: indexPath.row)
         return cell
     }
 }

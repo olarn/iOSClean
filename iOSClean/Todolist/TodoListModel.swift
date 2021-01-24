@@ -22,6 +22,9 @@ struct Todo: Equatable {
 
 class Todolist {
     static var todoItems: [Todo] = []
+    func updateItem(_ index: Int, with todo: Todo) {
+        
+    }
 }
 
 extension Date {
