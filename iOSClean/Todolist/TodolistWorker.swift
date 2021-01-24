@@ -11,14 +11,18 @@ class TodolistWorker {
     
     weak var interactor: TodolistInteractorDelegate?
     
-    func fetchTodolist() {
-        Todolist.todoItems =
-        [
-            Todo(title: "Read a book", dueDate: Date(), isDone: true),
-            Todo(title: "Workout", dueDate: Date(), isDone: false),
-            Todo(title: "Finish a game", dueDate: Date(), isDone: false),
-        ]
+    init() {
+        Todolist.store.delegate = self
+    }
+    
+    func add(todoItem: Todo) {
+        Todolist.store.addTodoItems([todoItem])
+    }
+}
 
-        interactor?.onTodolistUpdated(Todolist.todoItems)
+extension TodolistWorker: TodolistDelegate {
+
+    func onItemUpdate(items: [Todo]) {
+        interactor?.onTodolistUpdated(items)
     }
 }

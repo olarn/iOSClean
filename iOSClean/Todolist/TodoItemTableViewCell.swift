@@ -13,7 +13,7 @@ class TodoItemTableViewCell: UITableViewCell {
     @IBOutlet weak var dueDateLabel: UILabel!
     @IBOutlet weak var isDoneSwitch: UISwitch!
     
-    private var item: Todo?
+    private var item = Todo(title: "", dueDate: Date(), isDone: false)
     private var index = -1;
     
     func set(_ item: Todo, withIndex index: Int) {
@@ -25,6 +25,7 @@ class TodoItemTableViewCell: UITableViewCell {
     }
     
     @IBAction func onTodoItemStatusChanged(_ sender: Any) {
-        Todolist.todoItems[index].isDone = isDoneSwitch.isOn
+        item.isDone = isDoneSwitch.isOn
+        Todolist.store.updateItem(index, with: item)
     }
 }

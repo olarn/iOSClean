@@ -15,8 +15,8 @@ class TodolistInteractor {
     var worker: TodolistWorker?
     var presenter: TodolistPresenterDelegate?
 
-    func requestTodolist() {
-        worker?.fetchTodolist()
+    func add(todoItem: Todo) {
+        worker?.add(todoItem: todoItem)
     }
 }
 

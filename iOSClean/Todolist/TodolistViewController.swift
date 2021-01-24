@@ -39,7 +39,6 @@ class TodolistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        interactor.requestTodolist()
     }
 }
 

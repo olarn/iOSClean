@@ -7,6 +7,40 @@
 
 import Foundation
 
+protocol TodolistDelegate: class {
+    func onItemUpdate(items: [Todo])
+}
+
+class Todolist {
+    
+    private init() {}
+    private static var _sharedInstance = Todolist()
+
+    static var store: Todolist {
+        return _sharedInstance
+    }
+    
+    weak var delegate: TodolistDelegate?
+
+    private var _todoItems: [Todo] = []
+
+    var todoItems: [Todo] {
+        return _todoItems
+    }
+
+    func addTodoItems(_ items: [Todo]) {
+        items.forEach { eachItem in
+            _todoItems.append(eachItem)
+        }
+        delegate?.onItemUpdate(items: _todoItems)
+    }
+    
+    func updateItem(_ index: Int, with todo: Todo) {
+        _todoItems.replaceSubrange(index...index, with: [todo])
+        delegate?.onItemUpdate(items: _todoItems)
+    }
+}
+
 struct Todo: Equatable {
     var title: String
     var dueDate: Date
@@ -17,13 +51,6 @@ struct Todo: Equatable {
             lhs.title == rhs.title &&
             lhs.dueDate == rhs.dueDate &&
             lhs.isDone == rhs.isDone
-    }
-}
-
-class Todolist {
-    static var todoItems: [Todo] = []
-    func updateItem(_ index: Int, with todo: Todo) {
-        
     }
 }
 
