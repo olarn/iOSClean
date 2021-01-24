@@ -12,15 +12,13 @@ class TodolistWorker {
     weak var interactor: TodolistInteractorDelegate?
     
     func fetchTodolist() {
-        var todoList = Todolist()
+        Todolist.todoItems =
         [
             Todo(title: "Read a book", dueDate: Date(), isDone: true),
             Todo(title: "Workout", dueDate: Date(), isDone: false),
             Todo(title: "Finish a game", dueDate: Date(), isDone: false),
-        ].forEach { item in
-            todoList.todoItems.append(item)
-        }
+        ]
 
-        interactor?.onTodolistUpdated(todoList)
+        interactor?.onTodolistUpdated(Todolist.todoItems)
     }
 }

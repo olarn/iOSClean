@@ -8,7 +8,7 @@
 import UIKit
 
 protocol TodolistViewControllerDelegate: class {
-    func refresh(_ todoList: Todolist)
+    func refresh(_ todoItems: [Todo])
 }
 
 class TodolistViewController: UIViewController {
@@ -23,7 +23,7 @@ class TodolistViewController: UIViewController {
     let worker = TodolistWorker()
     let presenter = TodolistPresenter()
     
-    var todolist: Todolist = Todolist()
+    var todoItems = [Todo]()
 
     private func setup() {
         interactor.presenter = presenter
@@ -47,8 +47,8 @@ class TodolistViewController: UIViewController {
 
 extension TodolistViewController: TodolistViewControllerDelegate {
     
-    func refresh(_ todoList: Todolist) {
-        self.todolist = todoList
+    func refresh(_ todoItems: [Todo]) {
+        self.todoItems = todoItems
         todoListTableView.reloadData()
     }
 }
@@ -63,14 +63,14 @@ extension TodolistViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return todolist.totalItems
+        return todoItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "todoItemCell") as? TodoItemTableViewCell else {
             return UITableViewCell()
         }
-        cell.todoItem = self.todolist.todoItems[indexPath.row]
+        cell.todoItem = todoItems[indexPath.row]
         return cell
     }
 }

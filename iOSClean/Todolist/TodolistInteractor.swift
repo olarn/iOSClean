@@ -8,7 +8,7 @@
 import Foundation
 
 protocol TodolistInteractorDelegate: class {
-    func onTodolistUpdated(_ todolist: Todolist)
+    func onTodolistUpdated(_ todoItems: [Todo])
 }
 
 class TodolistInteractor {
@@ -21,8 +21,8 @@ class TodolistInteractor {
 }
 
 extension TodolistInteractor: TodolistInteractorDelegate {
-    func onTodolistUpdated(_ todolist: Todolist) {
-        presenter?.presentTodolist(todolist)
+    func onTodolistUpdated(_ todoItems: [Todo]) {
+        presenter?.presentTodolist(todoItems)
     }
 }
 

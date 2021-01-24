@@ -11,6 +11,7 @@
 		3713FA4325BBDC210082490A /* TodolistInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713FA4225BBDC210082490A /* TodolistInteractor.swift */; };
 		3713FA4825BBDD270082490A /* TodolistWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713FA4725BBDD270082490A /* TodolistWorker.swift */; };
 		3713FA5025BBE0ED0082490A /* TodoItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713FA4F25BBE0ED0082490A /* TodoItemTableViewCell.swift */; };
+		3713FA5C25BBF0E70082490A /* TodolistModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3713FA5B25BBF0E70082490A /* TodolistModelTests.swift */; };
 		374B919B25BBD353006AD053 /* TodoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 374B919A25BBD353006AD053 /* TodoListModel.swift */; };
 		37A0043325BBC2D6001D39B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0043225BBC2D6001D39B9 /* AppDelegate.swift */; };
 		37A0043525BBC2D6001D39B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0043425BBC2D6001D39B9 /* SceneDelegate.swift */; };
@@ -18,7 +19,6 @@
 		37A0043A25BBC2D6001D39B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A0043825BBC2D6001D39B9 /* Main.storyboard */; };
 		37A0043C25BBC2D7001D39B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37A0043B25BBC2D7001D39B9 /* Assets.xcassets */; };
 		37A0043F25BBC2D7001D39B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A0043D25BBC2D7001D39B9 /* LaunchScreen.storyboard */; };
-		37A0044A25BBC2D7001D39B9 /* iOSCleanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0044925BBC2D7001D39B9 /* iOSCleanTests.swift */; };
 		37A0045525BBC2D7001D39B9 /* iOSCleanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0045425BBC2D7001D39B9 /* iOSCleanUITests.swift */; };
 		37A0048225BBCF49001D39B9 /* TodolistPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A0048125BBCF49001D39B9 /* TodolistPresenter.swift */; };
 		A91E7E233662DDE570C4D723 /* Pods_iOSClean.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59791A500D849FCCB526AC26 /* Pods_iOSClean.framework */; };
@@ -49,6 +49,7 @@
 		3713FA4225BBDC210082490A /* TodolistInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistInteractor.swift; sourceTree = "<group>"; };
 		3713FA4725BBDD270082490A /* TodolistWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistWorker.swift; sourceTree = "<group>"; };
 		3713FA4F25BBE0ED0082490A /* TodoItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoItemTableViewCell.swift; sourceTree = "<group>"; };
+		3713FA5B25BBF0E70082490A /* TodolistModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodolistModelTests.swift; sourceTree = "<group>"; };
 		374B919A25BBD353006AD053 /* TodoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListModel.swift; sourceTree = "<group>"; };
 		3774610E21B850B919B059BE /* Pods-iOSClean-iOSCleanUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSClean-iOSCleanUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOSClean-iOSCleanUITests/Pods-iOSClean-iOSCleanUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		37A0042F25BBC2D6001D39B9 /* iOSClean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSClean.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,7 +61,6 @@
 		37A0043E25BBC2D7001D39B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37A0044025BBC2D7001D39B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A0044525BBC2D7001D39B9 /* iOSCleanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSCleanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		37A0044925BBC2D7001D39B9 /* iOSCleanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCleanTests.swift; sourceTree = "<group>"; };
 		37A0044B25BBC2D7001D39B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37A0045025BBC2D7001D39B9 /* iOSCleanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSCleanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A0045425BBC2D7001D39B9 /* iOSCleanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSCleanUITests.swift; sourceTree = "<group>"; };
@@ -114,6 +114,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3713FA5A25BBF0CC0082490A /* TodolistTests */ = {
+			isa = PBXGroup;
+			children = (
+				3713FA5B25BBF0E70082490A /* TodolistModelTests.swift */,
+			);
+			path = TodolistTests;
+			sourceTree = "<group>";
+		};
 		37A0042625BBC2D6001D39B9 = {
 			isa = PBXGroup;
 			children = (
@@ -153,7 +161,6 @@
 		37A0044825BBC2D7001D39B9 /* iOSCleanTests */ = {
 			isa = PBXGroup;
 			children = (
-				37A0044925BBC2D7001D39B9 /* iOSCleanTests.swift */,
 				37A0044B25BBC2D7001D39B9 /* Info.plist */,
 			);
 			path = iOSCleanTests;
@@ -177,6 +184,7 @@
 				3713FA4725BBDD270082490A /* TodolistWorker.swift */,
 				37A0048125BBCF49001D39B9 /* TodolistPresenter.swift */,
 				374B919A25BBD353006AD053 /* TodoListModel.swift */,
+				3713FA5A25BBF0CC0082490A /* TodolistTests */,
 			);
 			path = Todolist;
 			sourceTree = "<group>";
@@ -462,7 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37A0044A25BBC2D7001D39B9 /* iOSCleanTests.swift in Sources */,
+				3713FA5C25BBF0E70082490A /* TodolistModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

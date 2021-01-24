@@ -7,30 +7,25 @@
 
 import Foundation
 
-struct Todo {
+struct Todo: Equatable {
     var title: String
     var dueDate: Date
     var isDone: Bool
+    
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return
+            lhs.title == rhs.title &&
+            lhs.dueDate == rhs.dueDate &&
+            lhs.isDone == rhs.isDone
+    }
 }
 
-struct Todolist {
-    var todoItems: [Todo] = []
-
-    var totalItems: Int {
-        return todoItems.count
-    }
-
-    var totalRemains: Int {
-        return todoItems.filter { !$0.isDone }.count
-    }
-
-    var totalDone: Int {
-        return todoItems.filter { $0.isDone }.count
-    }
+class Todolist {
+    static var todoItems: [Todo] = []
 }
 
 extension Date {
-    func toString(format: String = "dd MM yyyy") -> String {
+    func toString(format: String = "dd-MM-yyyy") -> String {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
         formatter.dateFormat = format
